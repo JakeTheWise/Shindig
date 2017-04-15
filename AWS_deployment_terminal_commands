@@ -1,0 +1,4 @@
+alias deployShindig='ssh -i ${HOME}/Desktop/Shindig/Web/shindigKey.pem ec2-user@ec2-52-200-50-100.compute-1.amazonaws.com "cd /var/www; sudo rm -rf ./html; sudo mkdir ./html; cd ./html; sudo tar -xf /home/ec2-user/shindig.tar; sudo chown -R root:root *"'
+alias ls='/bin/ls -aF'
+alias pushShindig='scp -i ${HOME}/Desktop/Shindig/Web/shindigKey.pem ${HOME}/Desktop/Shindig/shindig.tar ec2-user@ec2-52-200-50-100.compute-1.amazonaws.com:'
+alias tarShindig='cd ${HOME}/Desktop/Shindig/Web/app; tar -cf ${HOME}/Desktop/Shindig/shindig.tar $(find . -type f \( ! -name .DS_Store \)); cd ${HOME}/Desktop/Shindig'
